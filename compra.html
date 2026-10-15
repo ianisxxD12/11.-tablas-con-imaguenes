@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Formulario de compra</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        label {
+            color: blue;
+            font-family: Arial, sans-serif;
+        }
+
+        fieldset {
+            margin-bottom: 15px;
+        }
+
+        input[type="text"] {
+            margin: 5px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Formulario de compra</h1>
+
+    <form action="procesa-compra.php" method="post">
+
+        <fieldset>
+            <legend>Datos personales</legend>
+
+            <p>
+                <label for="nombre">Nombre:</label>
+                <input type="text" id="nombre"
+                       name="nombre" required>
+            </p>
+
+            <p>
+                <label for="apellidos">Apellidos:</label>
+                <input type="text" id="apellidos"
+                       name="apellidos" required>
+            </p>
+        </fieldset>
+
+        <fieldset>
+            <legend>Datos postales</legend>
+
+            <p>
+                <label for="direccion">Dirección:</label>
+                <input type="text" id="direccion"
+                       name="direccion" required>
+            </p>
+
+            <p>
+                <label for="localidad">Localidad:</label>
+                <input type="text" id="localidad"
+                       name="localidad" required>
+            </p>
+
+            <p>
+                <label for="cp">Código postal:</label>
+                <input type="text" id="cp"
+                       name="codigo_postal"
+                       maxlength="5" required>
+            </p>
+        </fieldset>
+
+        <input type="submit" value="Comprar">
+
+        <a href="index.html">Cancelar</a>
+
+    </form>
+
+</body>
+</html>
